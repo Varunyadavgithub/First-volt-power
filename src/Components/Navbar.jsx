@@ -12,11 +12,11 @@ function Navbar() {
   };
 
   const isActive = (path) => {
-    return location.pathname === path ? "text-red-600" : "text-white";
+    return location.pathname === path ? "text-red-600" : "text-black";
   };
 
   return (
-    <nav className="bg-black p-2 relative z-50">
+    <nav className="p-2 relative z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center font-semibold px-5">
         <div className="flex items-center">
           <Link to="/">
@@ -73,7 +73,7 @@ function Navbar() {
           <button
             onClick={toggleNavbar}
             type="button"
-            className="text-white focus:outline-none z-50"
+            className="text-black focus:outline-none z-50"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -81,7 +81,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`fixed -z-50 pt-28 top-0 right-0 h-full w-64 bg-black text-white transform ${
+        className={`fixed -z-50 pt-28 top-0 right-0 h-full w-64 bg-white text-black transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden z-40`}
       >
