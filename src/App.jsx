@@ -2,9 +2,11 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products";
+import Projects from "./Pages/Projects";
+import Services from "./Pages/Services";
 import AboutUs from "./Pages/AboutUs";
 import Contact from "./Pages/Contact";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -14,10 +16,12 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </>
