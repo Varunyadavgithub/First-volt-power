@@ -36,12 +36,20 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="/products"
+            to="/projects"
             className={`${isActive(
-              "/products"
+              "/projects"
             )} hover:text-red-600 hover:scale-105`}
           >
-            Products
+            Projects
+          </Link>
+          <Link
+            to="/services"
+            className={`${isActive(
+              "/services"
+            )} hover:text-red-600 hover:scale-105`}
+          >
+            Services
           </Link>
           <Link
             to="/about"
@@ -89,13 +97,24 @@ function Navbar() {
           </li>
           <li>
             <Link
-              to="/products"
+              to="/projects"
               onClick={toggleNavbar}
               className={`${isActive(
-                "/products"
+                "/projects"
               )} hover:text-red-600 block px-3 py-2`}
             >
-              Products
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              onClick={toggleNavbar}
+              className={`${isActive(
+                "/services"
+              )} hover:text-red-600 block px-3 py-2`}
+            >
+              Services
             </Link>
           </li>
           <li>
