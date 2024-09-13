@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Images/logo.png";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const hamburger = useRef();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -15,15 +18,42 @@ function Navbar() {
     return location.pathname === path ? "text-red-600" : "text-black";
   };
 
+  let tl = gsap.timeline();
+  useGSAP(() => {
+    tl.from(".logo", {
+      y: -100,
+      delay: 0.1,
+      opacity: 0,
+    });
+    tl.from(".nav-links", {
+      y: -100,
+      opacity: 0,
+      stagger: 0.3,
+    });
+    gsap.from(hamburger.current, {
+      x: 100,
+      opacity: 0,
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from(".mob-nav-link", {
+      x: 100,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.2,
+    });
+  }, [isOpen]);
+
   return (
-    <nav className="p-2 relative z-50 shadow-lg">
+    <nav className="sticky top-0 p-2 bg-white shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center font-semibold px-5">
         <div className="flex items-center">
           <Link to="/">
             <img
               src={logo}
               alt="MultiTech AC Spare Parts"
-              className="h-20 md:h-28 w-auto mr-4 object-cover"
+              className="logo h-20 md:h-28 w-auto mr-4 object-cover"
             />
           </Link>
         </div>
@@ -31,39 +61,41 @@ function Navbar() {
         <div className="hidden md:flex space-x-6 text-xl">
           <Link
             to="/"
-            className={`${isActive("/")} hover:text-red-600 hover:scale-105`}
+            className={`nav-links ${isActive(
+              "/"
+            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
           >
             Home
           </Link>
           <Link
             to="/projects"
-            className={`${isActive(
+            className={`nav-links ${isActive(
               "/projects"
-            )} hover:text-red-600 hover:scale-105`}
+            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
           >
             Projects
           </Link>
           <Link
             to="/services"
-            className={`${isActive(
+            className={`nav-links ${isActive(
               "/services"
-            )} hover:text-red-600 hover:scale-105`}
+            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
           >
             Services
           </Link>
           <Link
             to="/about"
-            className={`${isActive(
+            className={`nav-links ${isActive(
               "/about"
-            )} hover:text-red-600 hover:scale-105`}
+            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
           >
             About Us
           </Link>
           <Link
             to="/contact"
-            className={`${isActive(
+            className={`nav-links ${isActive(
               "/contact"
-            )} hover:text-red-600 hover:scale-105`}
+            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
           >
             Contact
           </Link>
@@ -71,6 +103,7 @@ function Navbar() {
 
         <div className="md:hidden">
           <button
+            ref={hamburger}
             onClick={toggleNavbar}
             type="button"
             className="text-black focus:outline-none z-50"
@@ -90,7 +123,9 @@ function Navbar() {
             <Link
               to="/"
               onClick={toggleNavbar}
-              className={`${isActive("/")} hover:text-red-00 block px-3 py-2`}
+              className={`mob-nav-link ${isActive(
+                "/"
+              )} hover:text-red-600 block px-3 py-2`}
             >
               Home
             </Link>
@@ -99,7 +134,7 @@ function Navbar() {
             <Link
               to="/projects"
               onClick={toggleNavbar}
-              className={`${isActive(
+              className={`mob-nav-link ${isActive(
                 "/projects"
               )} hover:text-red-600 block px-3 py-2`}
             >
@@ -110,7 +145,7 @@ function Navbar() {
             <Link
               to="/services"
               onClick={toggleNavbar}
-              className={`${isActive(
+              className={`mob-nav-link ${isActive(
                 "/services"
               )} hover:text-red-600 block px-3 py-2`}
             >
@@ -121,7 +156,7 @@ function Navbar() {
             <Link
               to="/about"
               onClick={toggleNavbar}
-              className={`${isActive(
+              className={`mob-nav-link ${isActive(
                 "/about"
               )} hover:text-red-600 block px-3 py-2`}
             >
@@ -132,7 +167,7 @@ function Navbar() {
             <Link
               to="/contact"
               onClick={toggleNavbar}
-              className={`${isActive(
+              className={`mob-nav-link ${isActive(
                 "/contact"
               )} hover:text-red-600 block px-3 py-2`}
             >
