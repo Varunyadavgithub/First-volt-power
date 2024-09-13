@@ -1,4 +1,8 @@
 import React from "react";
+import Founder_And_CEO from "../assets/Images/Founder_&_CEO.jpg";
+import Chief_Technical_Officer from "../assets/Images/Chief_Technical_Officer.jpg";
+import Chief_Operating_Officer from "../assets/Images/Chief_Operating_Officer.jpg";
+import Chief_Financial_Officer from "../assets/Images/Chief_Financial_Officer.jpg";
 
 const AboutUs = () => {
   return (
@@ -78,9 +82,9 @@ const AboutUs = () => {
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="bg-white shadow-lg rounded-lg p-6">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={Founder_And_CEO}
                     alt="CEO"
-                    className="w-32 h-32 mx-auto rounded-full mb-4"
+                    className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
                   />
                   <h3 className="text-xl font-bold text-gray-800">John Doe</h3>
                   <p className="text-gray-600">CEO & Founder</p>
@@ -88,9 +92,9 @@ const AboutUs = () => {
 
                 <div className="bg-white shadow-lg rounded-lg p-6">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={Chief_Technical_Officer}
                     alt="CTO"
-                    className="w-32 h-32 mx-auto rounded-full mb-4"
+                    className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
                   />
                   <h3 className="text-xl font-bold text-gray-800">
                     Jane Smith
@@ -100,9 +104,9 @@ const AboutUs = () => {
 
                 <div className="bg-white shadow-lg rounded-lg p-6">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={Chief_Operating_Officer}
                     alt="COO"
-                    className="w-32 h-32 mx-auto rounded-full mb-4"
+                    className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
                   />
                   <h3 className="text-xl font-bold text-gray-800">
                     Michael Johnson
@@ -112,9 +116,9 @@ const AboutUs = () => {
 
                 <div className="bg-white shadow-lg rounded-lg p-6">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={Chief_Financial_Officer}
                     alt="CFO"
-                    className="w-32 h-32 mx-auto rounded-full mb-4"
+                    className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
                   />
                   <h3 className="text-xl font-bold text-gray-800">
                     Emily Davis

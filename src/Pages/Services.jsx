@@ -1,4 +1,9 @@
 import React from 'react';
+import img_01 from "../assets/Images/service_01.jpg";
+import img_02 from "../assets/Images/service_02.jpg";
+import img_03 from "../assets/Images/service_03.jpg";
+import img_04 from "../assets/Images/service_04.jpg";
+import img_05 from "../assets/Images/service_05.jpg";
 
 const Services = () => {
   const services = [
@@ -6,31 +11,31 @@ const Services = () => {
       title: 'Substation Design & Engineering',
       description:
         'We offer complete substation design services, ensuring efficient power delivery and reliable operation.',
-      icon: 'https://via.placeholder.com/50',
+      img: img_01,
     },
     {
       title: 'Installation & Maintenance',
       description:
         'Expert installation and maintenance services to ensure long-lasting performance of your substation equipment.',
-      icon: 'https://via.placeholder.com/50',
+      img: img_02,
     },
     {
       title: 'Electrical Testing & Commissioning',
       description:
         'Our testing and commissioning services ensure that all systems are operating optimally and meet regulatory standards.',
-      icon: 'https://via.placeholder.com/50',
+      img: img_03,
     },
     {
       title: 'Power System Upgrades',
       description:
         'We offer upgrades and modernizations for existing substations to improve efficiency and handle increased loads.',
-      icon: 'https://via.placeholder.com/50',
+      img: img_04,
     },
     {
       title: 'Emergency Repairs & Troubleshooting',
       description:
         'Our rapid-response team is available 24/7 for emergency repairs, ensuring your operations continue with minimal downtime.',
-      icon: 'https://via.placeholder.com/50',
+      img: img_05,
     },
   ];
 
@@ -48,12 +53,12 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white shadow-lg rounded-lg p-8 hover:shadow-xl transition-shadow duration-300 transform transition-transform duration-300 hover:scale-105 cursor-pointer"
             >
               <img
-                src={service.icon}
+                src={service.img}
                 alt={service.title}
-                className="w-16 h-16 mx-auto mb-6"
+                className="mb-4 h-56 w-full "
               />
               <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
               <p className="text-gray-700">{service.description}</p>
