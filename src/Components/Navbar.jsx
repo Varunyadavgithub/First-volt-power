@@ -81,7 +81,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`fixed -z-50 pt-28 top-0 right-0 h-full w-64 bg-white text-black transform ${
+        className={`fixed pt-4 top-20 right-0 h-full w-64 bg-white text-black transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden z-40`}
       >
