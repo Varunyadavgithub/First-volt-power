@@ -18,6 +18,13 @@ function Navbar() {
     return location.pathname === path ? "text-red-600" : "text-black";
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   let tl = gsap.timeline();
   useGSAP(() => {
     tl.from(".logo", {
@@ -122,7 +129,10 @@ function Navbar() {
           <li>
             <Link
               to="/"
-              onClick={toggleNavbar}
+              onClick={() => {
+                toggleNavbar();
+                scrollToTop();
+              }}
               className={`mob-nav-link ${isActive(
                 "/"
               )} hover:text-red-600 block px-3 py-2`}
@@ -133,7 +143,10 @@ function Navbar() {
           <li>
             <Link
               to="/projects"
-              onClick={toggleNavbar}
+              onClick={() => {
+                toggleNavbar();
+                scrollToTop();
+              }}
               className={`mob-nav-link ${isActive(
                 "/projects"
               )} hover:text-red-600 block px-3 py-2`}
@@ -144,7 +157,10 @@ function Navbar() {
           <li>
             <Link
               to="/services"
-              onClick={toggleNavbar}
+              onClick={() => {
+                toggleNavbar();
+                scrollToTop();
+              }}
               className={`mob-nav-link ${isActive(
                 "/services"
               )} hover:text-red-600 block px-3 py-2`}
@@ -155,7 +171,10 @@ function Navbar() {
           <li>
             <Link
               to="/about"
-              onClick={toggleNavbar}
+              onClick={() => {
+                toggleNavbar();
+                scrollToTop();
+              }}
               className={`mob-nav-link ${isActive(
                 "/about"
               )} hover:text-red-600 block px-3 py-2`}
@@ -166,7 +185,10 @@ function Navbar() {
           <li>
             <Link
               to="/contact"
-              onClick={toggleNavbar}
+              onClick={() => {
+                toggleNavbar();
+                scrollToTop();
+              }}
               className={`mob-nav-link ${isActive(
                 "/contact"
               )} hover:text-red-600 block px-3 py-2`}
