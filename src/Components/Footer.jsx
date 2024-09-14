@@ -34,7 +34,7 @@ const Footer = () => {
               4th Floor, TP1 Asopalav one west, link road, Sevasi - Canal Rd,
               Vadodara, Gujarat
             </p>
-            <p className="text-center md:text-xl">Email: infotech@firstvoltpower.com</p>
+            <p className="text-center md:text-xl">Email: infotech@firstvoltpower.in</p>
             <p className="text-center md:text-xl">Phone: +91-786-196-2973 </p>
           </div>
           <div>
