@@ -52,7 +52,7 @@ function Navbar() {
           <Link to="/">
             <img
               src={logo}
-              alt="MultiTech AC Spare Parts"
+              alt="first volt power"
               className="logo h-20 md:h-28 w-auto mr-4 object-cover"
             />
           </Link>

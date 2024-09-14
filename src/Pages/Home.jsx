@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
@@ -11,6 +11,10 @@ import img_02 from "../assets/Images/service_02.jpg";
 import img_03 from "../assets/Images/service_03.jpg";
 import img_04 from "../assets/Images/service_04.jpg";
 import img_05 from "../assets/Images/service_05.jpg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const settings = {
@@ -56,6 +60,46 @@ const Home = () => {
     },
   ];
 
+  useGSAP(() => {
+    gsap.from(".welcom-text", {
+      opacity: 0,
+      duration: 2,
+      delay: 0.2,
+      stagger: 0.4,
+    }),
+      gsap.fromTo(
+        ".services-card",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: 0.1,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: ".service",
+            start: "top 70%",
+            end: "bottom top",
+          },
+        }
+      ),
+      gsap.fromTo(
+        ".faq-item",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: 0.1,
+          stagger: 0.8,
+          scrollTrigger: {
+            trigger: ".faq",
+            start: "top 70%",
+            end: "bottom top",
+          },
+        }
+      );
+  });
   return (
     <div className="bg-gray-100 overflow-x-hidden">
       <section className="relative">
@@ -83,16 +127,16 @@ const Home = () => {
           </div>
         </Slider>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-50">
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="welcom-text text-5xl md:text-6xl font-bold mb-6">
             Welcome to First Volt Power
           </h1>
-          <p className="text-lg mb-10">
+          <p className="welcom-text text-lg md:text-xl mb-10">
             Powering the future with reliable, sustainable, and innovative
             electrical substation solutions.
           </p>
           <Link
             to="/contact"
-            className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg font-semibold text-lg"
+            className="welcom-text bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg font-semibold text-lg"
           >
             Get in Touch
           </Link>
@@ -120,7 +164,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gray-200">
+      <section className="service py-16 px-4 bg-gray-200">
         <div className="container mx-auto text-center">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -132,7 +176,7 @@ const Home = () => {
               electrical substation needs.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="services-card grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -163,13 +207,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="faq py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
             Frequently Asked Questions
           </h2>
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white shadow-lg rounded-lg p-6 mb-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="faq-item bg-white shadow-lg rounded-lg p-6 mb-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 What services do you offer?
               </h3>
@@ -178,7 +222,7 @@ const Home = () => {
                 installation, maintenance, testing, and emergency repairs.
               </p>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 mb-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="faq-item bg-white shadow-lg rounded-lg p-6 mb-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 How can I request a quote?
               </h3>
@@ -187,7 +231,7 @@ const Home = () => {
                 calling our office directly.
               </p>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 mb-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="faq-item bg-white shadow-lg rounded-lg p-6 mb-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 What is your service area?
               </h3>
