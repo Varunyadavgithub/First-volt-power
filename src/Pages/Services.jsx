@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import img_01 from "../assets/Images/service_01.jpg";
 import img_02 from "../assets/Images/service_02.jpg";
 import img_03 from "../assets/Images/service_03.jpg";
@@ -6,6 +7,8 @@ import img_04 from "../assets/Images/service_04.jpg";
 import img_05 from "../assets/Images/service_05.jpg";
 
 const Services = () => {
+  const servicesRef = useRef([]);
+
   const services = [
     {
       title: "Substation Design & Engineering",
@@ -39,13 +42,25 @@ const Services = () => {
     },
   ];
 
+  useEffect(() => {
+    gsap.fromTo(
+      servicesRef.current,
+      { opacity: 0, y: 100 }, // Initial state (off the screen below)
+      {
+        opacity: 1,
+        y: 0, // End state (to original position)
+        duration: 1,
+        stagger: 0.2, // Time delay between the animation of each card
+        ease: "power3.out",
+      }
+    );
+  }, []);
+
   return (
     <div className="bg-gray-100 py-12 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Our Services
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
           <p className="text-lg text-gray-600">
             At <span className="font-semibold">First Volt Power</span>, we
             provide a comprehensive range of services to support all your
@@ -57,12 +72,13 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
+              ref={(el) => (servicesRef.current[index] = el)}
               className="bg-white shadow-lg rounded-lg p-8 hover:shadow-xl transform transition-transform duration-300 hover:scale-105 cursor-pointer"
             >
               <img
                 src={service.img}
                 alt={service.title}
-                className="mb-4 h-56 w-full "
+                className="mb-4 h-56 w-full"
               />
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 {service.title}

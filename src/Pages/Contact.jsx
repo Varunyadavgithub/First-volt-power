@@ -77,7 +77,7 @@ const Contact = () => {
               </p>
               <p className="text-gray-700 mb-4">
                 <span className="font-semibold">Email:</span>{" "}
-                infotech@firstvoltpower.com
+                infotech@firstvoltpower.in
               </p>
               <p className="text-gray-700 mb-4">
                 <span className="font-semibold">Business Hours:</span> Mon - Fri,
