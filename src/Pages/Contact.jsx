@@ -1,21 +1,66 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
+  useEffect(() => {
+    const leftElement = leftRef.current;
+    const rightElement = rightRef.current;
+
+    gsap.fromTo(
+      leftElement,
+      { opacity: 0, x: -100 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: leftElement,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      rightElement,
+      { opacity: 0, x: 100 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: rightElement,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <>
       <div className="bg-gray-100 py-10 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
-              Contact Us
-            </h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
             <p className="text-lg text-gray-600">
               We'd love to hear from you. Get in touch with us today!
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white shadow-lg rounded-lg p-8">
+            <div
+              ref={leftRef}
+              className="bg-white shadow-lg rounded-lg p-8"
+            >
               <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                 Contact Information
               </h2>
@@ -23,7 +68,7 @@ const Contact = () => {
                 <strong>First Volt Power</strong>
               </p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">Address:</span>4th Floor, TP1
+                <span className="font-semibold">Address:</span> 4th Floor, TP1
                 Asopalav one west, link road, Sevasi - Canal Rd, Vadodara,
                 Gujarat
               </p>
@@ -35,8 +80,8 @@ const Contact = () => {
                 infotech@firstvoltpower.com
               </p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">Business Hours:</span> Mon -
-                Fri, 9 AM - 5 PM
+                <span className="font-semibold">Business Hours:</span> Mon - Fri,
+                9 AM - 5 PM
               </p>
 
               <div className="mt-6">
@@ -50,7 +95,10 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow-lg rounded-lg p-8">
+            <div
+              ref={rightRef}
+              className="bg-white shadow-lg rounded-lg p-8"
+            >
               <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                 Send Us a Message
               </h2>
