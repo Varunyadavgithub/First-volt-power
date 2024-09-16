@@ -7,6 +7,7 @@ import Services from "./Pages/Services";
 import AboutUs from "./Pages/AboutUs";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
+import FloatingContactIcons from "./Components/FloatingContactIcons";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <FloatingContactIcons/>
           <Footer />
         </Router>
       </div>
