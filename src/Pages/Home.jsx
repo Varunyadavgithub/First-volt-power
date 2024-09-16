@@ -100,6 +100,13 @@ const Home = () => {
         }
       );
   });
+
+  const scrollToTop=()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  }
   return (
     <div className="bg-gray-100 overflow-x-hidden">
       <section className="relative">
@@ -156,7 +163,7 @@ const Home = () => {
             project.
           </p>
           <Link
-            to="/about"
+            to="/about" onClick={scrollToTop}
             className="bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold text-lg"
           >
             Learn More About Us
@@ -199,6 +206,7 @@ const Home = () => {
           <div className="mt-8">
             <Link
               to="/services"
+              onClick={scrollToTop}
               className="bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold text-lg"
             >
               View All Services
@@ -256,6 +264,7 @@ const Home = () => {
           </p>
           <Link
             to="/contact"
+            onClick={scrollToTop}
             className="bg-white text-black hover:text-blue-600 py-3 px-6 rounded-lg font-semibold text-lg"
           >
             Contact Us Now
