@@ -50,17 +50,16 @@ const Contact = () => {
       <div className="flex flex-col min-h-screen mx-auto w-full bg-gray-100 py-10 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+              Contact Us
+            </h1>
             <p className="text-lg text-gray-600">
               We'd love to hear from you. Get in touch with us today!
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
-            <div
-              ref={leftRef}
-              className="bg-white shadow-lg rounded-lg p-8"
-            >
+            <div ref={leftRef} className="bg-white shadow-lg rounded-lg p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                 Contact Information
               </h2>
@@ -68,20 +67,32 @@ const Contact = () => {
                 <strong>First Volt Power</strong>
               </p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">Address:</span> 4th Floor, TP1
-                Asopalav one west, link road, Sevasi - Canal Rd, Vadodara,
-                Gujarat
+                <span className="font-semibold">Address:</span> 403 & 404,
+                Asopalav ,one west on Priya talkies, Sewasi link road, Nr.
+                Bharat petrol pump, Vadodara-391101, Gujarat.
               </p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">Phone:</span> +91-786-196-2973
+                <span className="font-semibold">Phone:</span> +91-760-088-5247
               </p>
               <p className="text-gray-700 mb-4">
                 <span className="font-semibold">Email:</span>{" "}
-                infotech@firstvoltpower.in
+                <a
+                  href="mailto:firstvoltpower@gmail.com"
+                  className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
+                >
+                  firstvoltpower@gmail.com
+                </a>
+                {" "}&{" "}
+                <a
+                  href="mailto:purchase.firstvoltpower@gmail.com"
+                  className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
+                >
+                  purchase.firstvoltpower@gmail.com
+                </a>
               </p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">Business Hours:</span> Mon - Fri,
-                9 AM - 5 PM
+                <span className="font-semibold">Business Hours:</span> Mon -
+                Fri, 9 AM - 5 PM
               </p>
 
               <div className="mt-6">
@@ -95,10 +106,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div
-              ref={rightRef}
-              className="bg-white shadow-lg rounded-lg p-8"
-            >
+            <div ref={rightRef} className="bg-white shadow-lg rounded-lg p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                 Send Us a Message
               </h2>

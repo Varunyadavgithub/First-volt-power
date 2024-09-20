@@ -11,6 +11,12 @@ import img_02 from "../assets/Images/service_02.jpg";
 import img_03 from "../assets/Images/service_03.jpg";
 import img_04 from "../assets/Images/service_04.jpg";
 import img_05 from "../assets/Images/service_05.jpg";
+import adani_logo from "../assets/Images/adani_Logo.png";
+import tata_logo from "../assets/Images/tata_power.png";
+import aditya_birla_group_logo from "../assets/Images/aditya_birla_group_logo.png";
+import kei_logo from "../assets/Images/kei_logo.png";
+import powerica_logo from "../assets/Images/powerica_logo.jpg";
+import chiripal_Logo from "../assets/Images/chiripal_Logo.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -60,6 +66,14 @@ const Home = () => {
     },
   ];
 
+  const clients = [
+    { name: "Adani", logo: adani_logo },
+    { name: "Tata Power", logo: tata_logo },
+    { name: "Aditya Birla Group", logo: aditya_birla_group_logo },
+    { name: "KEI", logo: kei_logo },
+    { name: "PowerICA", logo: powerica_logo },
+    { name: "Chiripal", logo: chiripal_Logo },
+  ];
   useGSAP(() => {
     gsap.from(".welcom-text", {
       opacity: 0,
@@ -101,12 +115,12 @@ const Home = () => {
       );
   });
 
-  const scrollToTop=()=>{
+  const scrollToTop = () => {
     window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    })
-  }
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="bg-gray-100 overflow-x-hidden">
       <section className="relative">
@@ -163,7 +177,8 @@ const Home = () => {
             project.
           </p>
           <Link
-            to="/about" onClick={scrollToTop}
+            to="/about"
+            onClick={scrollToTop}
             className="bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold text-lg"
           >
             Learn More About Us
@@ -211,6 +226,24 @@ const Home = () => {
             >
               View All Services
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Client List Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Clients</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:px-20">
+            {clients.map((client, index) => (
+              <div key={index} className="flex justify-center items-center">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="w-32 h-32 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

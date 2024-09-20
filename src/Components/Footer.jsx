@@ -30,12 +30,30 @@ const Footer = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
-            <p className="text-center md:text-xl">
-              4th Floor, TP1 Asopalav one west, link road, Sevasi - Canal Rd,
-              Vadodara, Gujarat
+            <p className="text-center md:text-xl py-1">
+              403 & 404, Asopalav ,one west on Priya talkies, Sewasi link road,
+              Nr. Bharat petrol pump, Vadodara-391101, Gujarat.
             </p>
-            <p className="text-center md:text-xl">Email: infotech@firstvoltpower.in</p>
-            <p className="text-center md:text-xl">Phone: +91-786-196-2973 </p>
+            <p className="text-center md:text-xl py-1">
+              E-mail:{" "}
+              <a
+                href="mailto:firstvoltpower@gmail.com"
+                className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
+              >
+                firstvoltpower@gmail.com
+              </a>
+              ,{" "}
+              <a
+                href="mailto:purchase.firstvoltpower@gmail.com"
+                className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
+              >
+                purchase.firstvoltpower@gmail.com
+              </a>
+            </p>
+
+            <p className="text-center md:text-xl py-1">
+              Phone: +91-760088-5247{" "}
+            </p>
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-center">Quick Links</h2>
@@ -91,14 +109,15 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-2">
             <h2 className="text-2xl font-bold mb-4 text-center">Follow Us</h2>
             <Link className="flex items-center gap-2 text-xl">
-              <FaLinkedin size={28} className="text-blue-500"/>
+              <FaLinkedin size={28} className="text-blue-500" />
               Linkedin
             </Link>
             <Link className="flex items-center gap-2 text-xl">
-              <FaSquareXTwitter size={28} className="text-white"/>
+              <FaSquareXTwitter size={28} className="text-white" />
               Twitter
-            </Link><Link className="flex items-center gap-2 text-xl">
-              <FaFacebookSquare size={28} className="text-blue-700"/>
+            </Link>
+            <Link className="flex items-center gap-2 text-xl">
+              <FaFacebookSquare size={28} className="text-blue-700" />
               Facbook
             </Link>
           </div>
