@@ -82,10 +82,10 @@ const AboutUs = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">About Us</h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
               <span className="font-semibold">
                 M/s. First Volt Power Services
-              </span>
+              </span>{" "}
               is an OHSAS 18001:2007 certified company which constructors with
               an aim to serve the nation professionally in the fields of EPC
               (Engineering, Procurement & Construction ). We are committed to
@@ -93,10 +93,10 @@ const AboutUs = () => {
               customer in terms of innovative and energy efficient engineering &
               On-time completion and exemplary project execution.
             </p>
-            <p>
+            <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
               <span className="font-semibold">
                 M/s. First Volt Power Services
-              </span>
+              </span>{" "}
               management enriched with more than 20 years of experience in the
               field of electrical services & Manufacturing. We offer to our
               valued customers complete solution from concept to commissioning
@@ -108,10 +108,10 @@ const AboutUs = () => {
               Electrical Maintenance & Shutdown Work, testing and commissioning
               etc.
             </p>
-            <p>
+            <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
               <span className="font-semibold">
                 Further, In the field of Renewable Energy
-              </span>
+              </span>{" "}
               M/s. First Volt Power Services has executed more than 1000 MW
               Solar Power Plant across India with our highly skilled and
               motivated team and more than 200 MW under Construction across
