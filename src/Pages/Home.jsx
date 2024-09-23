@@ -37,7 +37,7 @@ const Home = () => {
     {
       title: "Substation Design & Engineering",
       description:
-        "We offer complete substation design services, ensuring efficient power delivery and reliable operation.",
+        "We offer complete substation design services, ensuring efficient power delivery and reliable operation, like Supply, Installation, Testing & Commissioning of AIS & GIS up to 220 kV.",
       img: img_01,
     },
     {
@@ -230,7 +230,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Client List Section */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Clients</h2>
@@ -240,7 +239,7 @@ const Home = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="w-32 h-32 object-contain"
+                  className="w-32 h-32 object-contain hover:scale-105 cursor-pointer"
                 />
               </div>
             ))}

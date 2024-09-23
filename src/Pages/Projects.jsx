@@ -15,6 +15,7 @@ import project_11 from "../assets/Images/project_11.jpg";
 import project_12 from "../assets/Images/project_12.jpg";
 import project_13 from "../assets/Images/project_13.jpg";
 import project_14 from "../assets/Images/project_14.jpg";
+import project_15 from "../assets/Images/project_15.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,6 +60,7 @@ const Projects = () => {
     { img: project_12 },
     { img: project_13 },
     { img: project_14 },
+    { img: project_15 },
   ];
 
   return (

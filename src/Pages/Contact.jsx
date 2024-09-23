@@ -14,10 +14,10 @@ const Contact = () => {
 
     gsap.fromTo(
       leftElement,
-      { opacity: 0, x: -100 },
+      { opacity: 0, x: "-10%" },  // Adjusted to percentage
       {
         opacity: 1,
-        x: 0,
+        x: "0%",
         duration: 1.5,
         ease: "power3.out",
         scrollTrigger: {
@@ -30,10 +30,10 @@ const Contact = () => {
 
     gsap.fromTo(
       rightElement,
-      { opacity: 0, x: 100 },
+      { opacity: 0, x: "10%" },  // Adjusted to percentage
       {
         opacity: 1,
-        x: 0,
+        x: "0%",
         duration: 1.5,
         ease: "power3.out",
         scrollTrigger: {
@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen mx-auto w-full bg-gray-100 py-10 px-4">
+      <div className="flex flex-col min-h-screen mx-auto w-full bg-gray-100 py-10 px-4 overflow-x-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -58,7 +58,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div ref={leftRef} className="bg-white shadow-lg rounded-lg p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                 Contact Information
@@ -82,7 +82,7 @@ const Contact = () => {
                 >
                   firstvoltpower@gmail.com
                 </a>
-                {" "}&{" "}
+                {" "} & {" "}
                 <a
                   href="mailto:purchase.firstvoltpower@gmail.com"
                   className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
