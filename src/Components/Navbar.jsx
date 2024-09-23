@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Images/logo.png";
+import brochure from "../assets/Brochure.pdf";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -65,47 +66,58 @@ function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden md:flex space-x-6 text-xl">
-          <Link
-            to="/"
-            className={`nav-links ${isActive(
-              "/"
-            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
-          >
-            Home
-          </Link>
-          <Link
-            to="/projects"
-            className={`nav-links ${isActive(
-              "/projects"
-            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
-          >
-            Projects
-          </Link>
-          <Link
-            to="/services"
-            className={`nav-links ${isActive(
-              "/services"
-            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
-          >
-            Services
-          </Link>
-          <Link
-            to="/about"
-            className={`nav-links ${isActive(
-              "/about"
-            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
-          >
-            About Us
-          </Link>
-          <Link
-            to="/contact"
-            className={`nav-links ${isActive(
-              "/contact"
-            )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
-          >
-            Contact
-          </Link>
+        <div className="flex flex-col items-center gap-2">
+          <div className="hidden md:flex">
+            <a
+              href={brochure}
+              download="FirstVoltPower_Brochure.pdf"
+              className="nav-links text-white bg-blue-500 hover:bg-blue-700 p-2 rounded-md"
+            >
+              Download Brochure
+            </a>
+          </div>
+          <div className="hidden md:flex space-x-6 text-xl">
+            <Link
+              to="/"
+              className={`nav-links ${isActive(
+                "/"
+              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/projects"
+              className={`nav-links ${isActive(
+                "/projects"
+              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+            >
+              Projects
+            </Link>
+            <Link
+              to="/services"
+              className={`nav-links ${isActive(
+                "/services"
+              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+            >
+              Services
+            </Link>
+            <Link
+              to="/about"
+              className={`nav-links ${isActive(
+                "/about"
+              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/contact"
+              className={`nav-links ${isActive(
+                "/contact"
+              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
 
         <div className="md:hidden">
@@ -195,6 +207,16 @@ function Navbar() {
             >
               Contacts
             </Link>
+          </li>
+
+          <li>
+            <a
+              href={brochure}
+              download="FirstVoltPower_Brochure.pdf"
+              className="nav-links text-sm text-nowrap text-white bg-blue-500 hover:bg-blue-700 p-2 rounded-md"
+            >
+              Download Brochure
+            </a>
           </li>
         </ul>
       </div>
