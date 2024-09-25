@@ -85,6 +85,15 @@ function Navbar() {
             >
               Home
             </Link>
+
+            <Link
+              to="/about"
+              className={`nav-links ${isActive(
+                "/about"
+              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+            >
+              About Us
+            </Link>
             <Link
               to="/projects"
               className={`nav-links ${isActive(
@@ -100,14 +109,6 @@ function Navbar() {
               )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
             >
               Services
-            </Link>
-            <Link
-              to="/about"
-              className={`nav-links ${isActive(
-                "/about"
-              )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
-            >
-              About Us
             </Link>
             <Link
               to="/contact"
