@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import img_01 from "../assets/Images/service_01.jpg";
-import img_02 from "../assets/Images/service_02.jpg";
+import img_02 from "../assets/Images/service_02.webp";
 import img_03 from "../assets/Images/service_03.jpg";
 import img_04 from "../assets/Images/service_04.jpg";
 import img_05 from "../assets/Images/service_05.jpg";
@@ -9,6 +9,7 @@ import img_06 from "../assets/Images/service_06.jpg";
 import img_07 from "../assets/Images/service_07.jpg";
 import img_08 from "../assets/Images/service_08.jpg";
 import img_09 from "../assets/Images/service_09.jpg";
+import img_10 from "../assets/Images/service_10.webp";
 
 const Services = () => {
   const servicesRef = useRef([]);
@@ -21,15 +22,15 @@ const Services = () => {
       img: img_01,
     },
     {
-      title: "Installation & Maintenance",
+      title: "EPC Work for Substations",
       description:
-        "Expert installation and maintenance services to ensure long-lasting performance of your substation equipment.",
+        "We offer substation design and construction services to ensure efficient and reliable power delivery.",
       img: img_02,
     },
     {
-      title: "Electrical Testing & Commissioning",
+      title: "Electrical EPC for Wind Power Projects",
       description:
-        "Our testing and commissioning services ensure that all systems are operating optimally and meet regulatory standards.",
+        "Comprehensive EPC services for wind power projects, ensuring optimal performance and energy efficiency.",
       img: img_03,
     },
     {
@@ -57,8 +58,9 @@ const Services = () => {
       img: img_07,
     },
     {
-      title: "Transmission Line",
-      description: "Transmission Line up to 220 kV.",
+      title: "Operations and Maintenance for Solar Plants and Substations",
+      description:
+        "Reliable operations and maintenance services to ensure the long-term performance of solar plants and substations.",
       img: img_08,
     },
     {
@@ -67,17 +69,23 @@ const Services = () => {
         "Our Firm is specialized in Supply, Erection, Testing & Commissioning of MW Grid connected Solar Power Plant – AC & DC Side and KW Off Grid / Grid Connected Rooftop Solar System",
       img: img_09,
     },
+    {
+      title: "EPC Work for Solar Plants",
+      description:
+        "Complete EPC solutions for solar power plants, from design and engineering to procurement and construction.",
+      img: img_10,
+    },
   ];
 
   useEffect(() => {
     gsap.fromTo(
       servicesRef.current,
-      { opacity: 0, y: 100 }, // Initial state (off the screen below)
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
-        y: 0, // End state (to original position)
+        y: 0,
         duration: 1,
-        stagger: 0.2, // Time delay between the animation of each card
+        stagger: 0.2,
         ease: "power3.out",
       }
     );

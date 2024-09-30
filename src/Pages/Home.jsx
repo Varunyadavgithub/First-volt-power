@@ -7,7 +7,7 @@ import carousel_01 from "../assets/Images/carousel_01.jpg";
 import carousel_02 from "../assets/Images/carousel_02.jpg";
 import carousel_03 from "../assets/Images/carousel_03.jpg";
 import img_01 from "../assets/Images/service_01.jpg";
-import img_02 from "../assets/Images/service_02.jpg";
+import img_02 from "../assets/Images/service_02.webp";
 import img_03 from "../assets/Images/service_03.jpg";
 import img_04 from "../assets/Images/service_04.jpg";
 import img_05 from "../assets/Images/service_05.jpg";
@@ -39,19 +39,19 @@ const Home = () => {
     {
       title: "Substation Design & Engineering",
       description:
-        "We offer complete substation design services, ensuring efficient power delivery and reliable operation, like Supply, Installation, Testing & Commissioning of AIS & GIS up to 220 kV.",
+        "We offer complete substation design services, ensuring efficient power delivery and reliable operation.",
       img: img_01,
     },
     {
-      title: "Installation & Maintenance",
+      title: "EPC Work for Substations",
       description:
-        "Expert installation and maintenance services to ensure long-lasting performance of your substation equipment.",
+        "We offer substation design and construction services to ensure efficient and reliable power delivery.",
       img: img_02,
     },
     {
-      title: "Electrical Testing & Commissioning",
+      title: "Electrical EPC for Wind Power Projects",
       description:
-        "Our testing and commissioning services ensure that all systems are operating optimally and meet regulatory standards.",
+        "Comprehensive EPC services for wind power projects, ensuring optimal performance and energy efficiency.",
       img: img_03,
     },
     {
@@ -94,7 +94,7 @@ const Home = () => {
       img: project_06,
     },
   ];
- 
+
   useGSAP(() => {
     gsap.from(".welcom-text", {
       opacity: 0,
@@ -252,7 +252,7 @@ const Home = () => {
         </div>
       </section>
 
-     <ClientsSection/>
+      <ClientsSection />
 
       <section className="py-16 px-4 bg-gray-200 relative">
         <div className="container mx-auto text-center">
