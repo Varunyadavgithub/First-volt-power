@@ -14,7 +14,7 @@ const Contact = () => {
 
     gsap.fromTo(
       leftElement,
-      { opacity: 0, x: "-10%" },  // Adjusted to percentage
+      { opacity: 0, x: "-10%" }, 
       {
         opacity: 1,
         x: "0%",
@@ -30,7 +30,7 @@ const Contact = () => {
 
     gsap.fromTo(
       rightElement,
-      { opacity: 0, x: "10%" },  // Adjusted to percentage
+      { opacity: 0, x: "10%" },  
       {
         opacity: 1,
         x: "0%",
@@ -80,19 +80,13 @@ const Contact = () => {
                   href="mailto:firstvoltpower@gmail.com"
                   className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
                 >
-                  firstvoltpower@gmail.com
+                  sales@firstvoltpower.in
                 </a>
-                {" "} & {" "}
-                <a
-                  href="mailto:purchase.firstvoltpower@gmail.com"
-                  className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
-                >
-                  purchase.firstvoltpower@gmail.com
-                </a>
+                {" "}
               </p>
               <p className="text-gray-700 mb-4">
                 <span className="font-semibold">Business Hours:</span> Mon -
-                Fri, 9 AM - 5 PM
+                Fri, 9:00 AM - 6:00 PM
               </p>
 
               <div className="mt-6">

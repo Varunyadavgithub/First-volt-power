@@ -40,14 +40,7 @@ const Footer = () => {
                 href="mailto:firstvoltpower@gmail.com"
                 className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
               >
-                firstvoltpower@gmail.com
-              </a>
-              ,{" "}
-              <a
-                href="mailto:purchase.firstvoltpower@gmail.com"
-                className="text-blue-500 hover:text-blue-600 hover:underline cursor-pointer"
-              >
-                purchase.firstvoltpower@gmail.com
+                sales@firstvoltpower.in{" "}
               </a>
             </p>
 
