@@ -1,10 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Founder_And_CEO from "../assets/Images/Founder_&_CEO.jpg";
-import Chief_Technical_Officer from "../assets/Images/Chief_Technical_Officer.jpg";
-import Chief_Operating_Officer from "../assets/Images/Chief_Operating_Officer.jpg";
-import Chief_Financial_Officer from "../assets/Images/Chief_Financial_Officer.jpg";
+import {
+  FaBullseye,
+  FaLightbulb,
+  FaHeart,
+  FaHistory,
+  FaCheckCircle,
+} from "react-icons/fa";
+import AboutUs_Image from "../assets/Images/aboutus_image.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,78 +84,92 @@ const AboutUs = () => {
     <div className="flex flex-col min-h-screen">
       <div className="bg-gray-100 py-10 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">About Us</h1>
-            <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
-              <span className="font-semibold">
-                M/s. First Volt Power Services
-              </span>{" "}
-              is an OHSAS 18001:2007 certified company which constructors with
-              an aim to serve the nation professionally in the fields of EPC
-              (Engineering, Procurement & Construction ). We are committed to
-              our quality and safety policies. We generate immense value for
-              customer in terms of innovative and energy efficient engineering &
-              On-time completion and exemplary project execution.
-            </p>
-            <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
-              <span className="font-semibold">
-                M/s. First Volt Power Services
-              </span>{" "}
-              management enriched with more than 20 years of experience in the
-              field of electrical services & Manufacturing. We offer to our
-              valued customers complete solution from concept to commissioning
-              of Sub-stations, Transmission Line, Distribution, Industrial
-              Electrification, Cabling work and Balance of plant related project
-              which includes Erection of Power transformers, HT/LT Panels, HT/LT
-              Power & Control Cable Laying and Termination, HT Cable Straight
-              through joints, Street & Area Lighting, Earthing works and
-              Electrical Maintenance & Shutdown Work, testing and commissioning
-              etc.
-            </p>
-            <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
-              <span className="font-semibold">
-                Further, In the field of Renewable Energy
-              </span>{" "}
-              M/s. First Volt Power Services has executed more than 1000 MW
-              Solar Power Plant across India with our highly skilled and
-              motivated team and more than 200 MW under Construction across
-              India.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+            <div>
+              <img
+                src={AboutUs_Image}
+                alt="About Us"
+                className="rounded-lg shadow-lg w-full"
+              />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold text-gray-800 mb-4">
+                About Us
+              </h1>
+              <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
+                <span className="font-semibold">
+                  M/s. First Volt Power Services
+                </span>{" "}
+                is OHSAS 18001:2007 certified company Emerged with an aim to
+                serve the nation utilising our experience & technical skills
+                professionally in the fields of EPC (Engineering, Procurement &
+                Construction ) We generate immense value for our customer by way
+                of latest and emerging energy efficient engineering and
+                Execution & completion of exemplary project within given time
+                frame.
+              </p>
+              <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
+                <span className="font-semibold">
+                  M/s. First Volt Power Services{" "}
+                </span>{" "}
+                management enriched with more than 8 years of experience in the
+                field of Renewable Energy and Electrical EPC services . We offer
+                to our valued customers complete solution from concept to
+                commissioning of Sub-stations , Transmission Line, Distribution
+                Network, Industrial Electrification, Cabling work and plant
+                related Electrical projects which includes Installation &
+                Commissioning of Power transformers, HT/LT Panels, HT/LT Power &
+                Control Cable Laying and Termination, HT Cable Straight through
+                joints, Street & Area Lighting, Earthing works and Electrical
+                testing ,Maintenance & Shutdown Work, etc.
+              </p>
+              <p className="text-lg text-gray-600 text-justify py-4 md:px-10">
+                <span className="font-semibold">
+                  Further, In the field of Renewable Energy{" "}
+                </span>{" "}
+                M/s. First Volt Power Services has executed more than 1100 MW
+                Solar Power Projects and more than 300 MW under Construction at
+                different locations across India with our team of Experienced
+                and quality conscious Engineers and skilled Technicians.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div ref={missionRef} className="bg-white shadow-lg rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="flex gap-2 text-2xl font-bold text-gray-800 mb-4">
+                <FaBullseye className="text-4xl text-blue-600 mb-4" />
                 Our Mission
               </h2>
               <p className="text-gray-700">
-                We regard our work ethics in highest nature, to be productive
-                and pro-active in our projects to be accountable for all work
-                undertaken by First Volt Power Services. We pride ourselves in
-                quality that speaks for itself without compromising safety and
-                reliability. We respect that each project deserves our attention
-                to detail attitude.
+                We acknowledge work ethics in highest possible nature to be
+                productive and pro-active in the projects and to be accountable
+                for all work undertaken by First Volt Power Services. We take
+                pride that We ensure and assure the quality that speaks for
+                itself without compromising safety.
               </p>
             </div>
             <div ref={visionRef} className="bg-white shadow-lg rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="flex gap-2 text-2xl font-bold text-gray-800 mb-4">
+                <FaLightbulb className="text-4xl text-yellow-600 mb-4" />
                 Our Vision
               </h2>
               <p className="text-gray-700">
-                To become a global leader in energy infrastructure, enhancing
-                power delivery and ensuring a bright future powered by reliable
-                electricity.
+                To become one of the global leaders in Energy infrastructure,
+                Enhancing Power generation & Distribution and ensuring bright
+                future powered by efficient electricity generation.
               </p>
             </div>
             <div ref={valuesRef} className="bg-white shadow-lg rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="flex gap-2 text-2xl font-bold text-gray-800 mb-4">
+                <FaHeart className="text-4xl text-red-600 mb-4" />
                 Our Values
               </h2>
               <p>
-                Our values guide the way we work with our business partners,
-                within our communities and with each other. Through our values,
-                we have created a company culture where ideas can blossom,
-                people can thrive, and success can flourish
+                Our values lead us on the path we work with our business
+                partners, within our communities, and with each other. We have
+                created a company culture where ideas can blossom, people can
+                thrive, and success can flourish.s
               </p>
             </div>
           </div>
@@ -160,12 +178,15 @@ const AboutUs = () => {
             ref={storyRef}
             className="bg-white shadow-lg rounded-lg p-8 mb-12"
           >
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Story</h2>
+            <h2 className="flex gap-2 text-2xl font-bold text-gray-800 mb-6">
+              <FaHistory className="text-4xl text-green-600 mb-4" />
+              Our Story
+            </h2>
             <p className="text-gray-700 mb-4">
-              First Volt Power was established in 2005 with a vision to
-              revolutionize power infrastructure in the industry. Over the past
-              decades, we have successfully completed numerous projects across
-              different sectors, earning a reputation for excellence and
+              First Volt Power was established in 2017 with a vision to
+              revolutionize Power infrastructure in the industry. Since almost a
+              decade, we have successfully completed numerous projects across
+              different sectors, earned reputation for excellence and
               trustworthiness.
             </p>
             <p className="text-gray-700">
@@ -176,68 +197,20 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">
-              Meet Our Leadership Team
-            </h2>
-            <div
-              ref={leadershipRef}
-              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <img
-                  src={Founder_And_CEO}
-                  alt="CEO"
-                  className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-bold text-gray-800">John Doe</h3>
-                <p className="text-gray-600">CEO & Founder</p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <img
-                  src={Chief_Technical_Officer}
-                  alt="CTO"
-                  className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-bold text-gray-800">Jane Smith</h3>
-                <p className="text-gray-600">Chief Technical Officer</p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <img
-                  src={Chief_Operating_Officer}
-                  alt="COO"
-                  className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-bold text-gray-800">
-                  Michael Johnson
-                </h3>
-                <p className="text-gray-600">Chief Operating Officer</p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <img
-                  src={Chief_Financial_Officer}
-                  alt="CFO"
-                  className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-bold text-gray-800">Emily Davis</h3>
-                <p className="text-gray-600">Chief Financial Officer</p>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-white shadow-lg rounded-lg p-8 why-choose-us">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="flex gap-2 text-2xl font-bold text-gray-800 mb-6">
+              <FaCheckCircle className="text-4xl text-teal-600 mb-4" />
               Why Choose First Volt Power?
             </h2>
             <ul className="list-disc text-gray-700 pl-5">
-              <li className="mb-2">Over 15 years of industry experience</li>
+              <li className="mb-2">Over 08 years of industry experience.</li>
               <li className="mb-2">
-                Proven track record of successful projects
+                Proven track record of successful and on time projects.
               </li>
-              <li className="mb-2">A team of highly skilled professionals</li>
-              <li className="mb-2">Customer-focused and results-driven</li>
+              <li className="mb-2">A team of highly skilled professionals.</li>
+              <li className="mb-2">Customer-focused and results-driven.</li>
               <li className="mb-2">
-                Commitment to innovation and sustainability
+                Commitment to innovation and sustainability.
               </li>
             </ul>
           </div>

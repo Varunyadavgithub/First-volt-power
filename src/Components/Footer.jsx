@@ -124,8 +124,17 @@ const Footer = () => {
         </div>
 
         <div className="text-center text-sm text-gray-400 mt-8">
-          &copy; {new Date().getFullYear()} First volt power. All rights
-          reserved.
+          <p>
+            &copy; {new Date().getFullYear()} All Rights Reserved{" "}
+            <span className="font-bold">First volt power </span>Managed By{" "}
+            <a
+              href="https://www.taniyawebfix.com/"
+              target="_blank"
+              className="hover:cursor-pointer hover:underline text-blue-600"
+            >
+              TaniyaWebfix Pvt.Ltd
+            </a>
+          </p>{" "}
         </div>
       </footer>
     </div>

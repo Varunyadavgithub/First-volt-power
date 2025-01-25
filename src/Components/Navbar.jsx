@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Images/logo.png";
@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const location = useLocation();
   const hamburger = useRef();
 
@@ -102,14 +103,33 @@ function Navbar() {
             >
               Projects
             </Link>
+
+            {/* Services Dropdown */}
+            {/* Services Dropdown */}
+            <div
+              className="group relative flex items-center" // Added flex and items-center
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+            >
+              <Link
+                to="/services"
+                className={`nav-links ${isActive(
+                  "/services"
+                )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
+              >
+                Services
+              </Link>
+            </div>
+
             <Link
-              to="/services"
+              to="/career"
               className={`nav-links ${isActive(
-                "/services"
+                "/career"
               )} hover:text-red-600 hover:scale-105 hover:bg-red-200 p-2 rounded-full`}
             >
-              Services
+              Career
             </Link>
+
             <Link
               to="/contact"
               className={`nav-links ${isActive(
@@ -179,6 +199,20 @@ function Navbar() {
               )} hover:text-red-600 block px-3 py-2`}
             >
               Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/career"
+              onClick={() => {
+                toggleNavbar();
+                scrollToTop();
+              }}
+              className={`mob-nav-link ${isActive(
+                "/career"
+              )} hover:text-red-600 block px-3 py-2`}
+            >
+              Career
             </Link>
           </li>
           <li>
