@@ -17,6 +17,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ClientsSection from "../Components/ClientsSection";
 import ProjectSection from "../Components/ProjectSection";
+import AboutImage from "../assets/Images/AboutImage.jpg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -154,39 +156,54 @@ const Home = () => {
       </section>
 
       <section className="py-16 px-4 bg-gray-100">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">
-            About First Volt Power Services
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gray-600 text-justify leading-relaxed mb-6">
-              M/s. First Volt Power Services, an{" "}
-              <strong>OHSAS 18001:2007 certified company</strong>, is dedicated
-              to delivering excellence in the fields of{" "}
-              <strong>EPC (Engineering, Procurement & Construction)</strong>.
-              With over 8 years of expertise in Renewable Energy and Electrical
-              EPC services, we provide end-to-end solutions, including
-              substation construction, transmission line development, industrial
-              electrification, and comprehensive electrical maintenance.
-            </p>
-            <p className="text-gray-600 text-justify leading-relaxed mb-6">
-              Our team of experienced engineers and skilled technicians has
-              successfully executed more than{" "}
-              <strong>1100 MW of Solar Power Projects</strong> across India,
-              with <strong>300 MW currently under construction</strong>. By
-              combining energy-efficient engineering practices with timely
-              project execution, we generate immense value for our clients and
-              contribute to the nation’s progress.
-            </p>
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+          {/* Image Container */}
+          <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <div className="rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src={AboutImage} // Import an appropriate company image
+                alt="First Volt Power Services"
+                className="w-full h-[500px] object-cover object-center"
+              />
+            </div>
           </div>
-          <div className="text-center">
-            <Link
-              to="/about"
-              onClick={scrollToTop}
-              className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-indigo-600 hover:to-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-lg transition-transform transform hover:scale-105"
-            >
-              Learn More About Us
-            </Link>
+
+          {/* Text Container */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-4xl font-bold text-gray-800 mb-10">
+              About First Volt Power Services
+            </h2>
+            <div>
+              <p className="text-gray-600 text-justify leading-relaxed mb-6">
+                M/s. First Volt Power Services, an{" "}
+                <strong>OHSAS 18001:2007 certified company</strong>, is
+                dedicated to delivering excellence in the fields of{" "}
+                <strong>EPC (Engineering, Procurement & Construction)</strong>.
+                With over 8 years of expertise in Renewable Energy and
+                Electrical EPC services, we provide end-to-end solutions,
+                including substation construction, transmission line
+                development, industrial electrification, and comprehensive
+                electrical maintenance.
+              </p>
+              <p className="text-gray-600 text-justify leading-relaxed mb-6">
+                Our team of experienced engineers and skilled technicians has
+                successfully executed more than{" "}
+                <strong>1100 MW of Solar Power Projects</strong> across India,
+                with <strong>300 MW currently under construction</strong>. By
+                combining energy-efficient engineering practices with timely
+                project execution, we generate immense value for our clients and
+                contribute to the nation's progress.
+              </p>
+            </div>
+            <div>
+              <Link
+                to="/about"
+                onClick={scrollToTop}
+                className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-indigo-600 hover:to-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-lg transition-transform transform hover:scale-105"
+              >
+                Learn More About Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>

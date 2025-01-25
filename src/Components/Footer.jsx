@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/Images/logo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -18,16 +17,24 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <div>
       <footer className="bg-black text-white py-10 px-4">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center">
-            <img src={logo} alt="logo" className="h-28 w-auto" />
-            <h2 className="text-lg font-semibold text-center">
-              First Volt Power <br /> Services
-            </h2>
+          {/* About Us Section */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-center">About Us</h2>
+            <p className="text-center text-base leading-relaxed">
+              First Volt Power Services is a leading electrical solutions provider 
+              dedicated to delivering innovative, safe, and efficient power services. 
+              With a team of expert professionals, we specialize in comprehensive 
+              electrical installations, maintenance, and consulting for various 
+              industrial and commercial sectors.
+            </p>
           </div>
+
+          {/* Contact Us Section (Unchanged) */}
           <div>
             <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
             <p className="text-center md:text-xl py-1">
@@ -55,6 +62,8 @@ const Footer = () => {
               Phone: +91-760088-5247{" "}
             </p>
           </div>
+
+          {/* Quick Links (Unchanged) */}
           <div>
             <h2 className="text-2xl font-bold mb-4 text-center">Quick Links</h2>
             <ul className="space-y-2 text-center text-xl">
@@ -106,6 +115,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Follow Us Section (Unchanged) */}
           <div className="flex flex-col items-center gap-2">
             <h2 className="text-2xl font-bold mb-4 text-center">Follow Us</h2>
             <Link className="flex items-center gap-2 text-xl">
@@ -118,11 +128,12 @@ const Footer = () => {
             </Link>
             <Link className="flex items-center gap-2 text-xl">
               <FaFacebookSquare size={28} className="text-blue-700" />
-              Facbook
+              Facebook
             </Link>
           </div>
         </div>
 
+        {/* Copyright Section (Unchanged) */}
         <div className="text-center text-sm text-gray-400 mt-8">
           <p>
             &copy; {new Date().getFullYear()} All Rights Reserved{" "}
@@ -130,6 +141,7 @@ const Footer = () => {
             <a
               href="https://www.taniyawebfix.com/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:cursor-pointer hover:underline text-blue-600"
             >
               TaniyaWebfix Pvt.Ltd
