@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { FaRegLightbulb } from "react-icons/fa";
 import img_01 from "../assets/Images/service_01.jpg";
-import img_02 from "../assets/Images/service_02.webp";
+import img_02 from "../assets/Images/service_02.jpg";
 import img_03 from "../assets/Images/service_03.jpg";
 import img_04 from "../assets/Images/service_04.jpg";
 import img_05 from "../assets/Images/service_05.jpg";
