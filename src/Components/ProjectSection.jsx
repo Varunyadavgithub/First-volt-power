@@ -1,22 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import project_01 from "../assets/Images/project_01.jpg";
-import project_02 from "../assets/Images/project_02.jpg";
-import project_03 from "../assets/Images/project_03.jpg";
-import project_04 from "../assets/Images/project_04.jpg";
-import project_05 from "../assets/Images/project_05.jpg";
-import project_06 from "../assets/Images/project_06.jpg";
-import { Link } from "react-router-dom";
+import { projectItems } from "../assets/assets";
 
-const projects = [
-  { name: "Project 1", img: project_01 },
-  { name: "Project 2", img: project_02 },
-  { name: "Project 3", img: project_03 },
-  { name: "Project 4", img: project_04 },
-  { name: "Project 5", img: project_05 },
-  { name: "Project 6", img: project_06 },
-];
+import { Link } from "react-router-dom";
 
 const settings = {
   dots: false,
@@ -65,7 +52,7 @@ const ProjectSection = () => {
         </p>
 
         <Slider {...settings}>
-          {projects.map((project, index) => (
+          {projectItems.map((project, index) => (
             <div key={index} className="p-4 flex justify-center items-center">
               <div className="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transform transition-all duration-500 hover:scale-105">
                 <img

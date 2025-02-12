@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/Images/logo.png";
+import { assets } from "../assets/assets";
 import brochure from "../assets/Brochure.pdf";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -60,7 +60,7 @@ function Navbar() {
         <div className="flex items-center">
           <Link to="/">
             <img
-              src={logo}
+              src={assets.logo}
               alt="first volt power"
               className="logo h-20 md:h-28 w-auto mr-4 object-cover"
             />
